@@ -1,0 +1,3 @@
+<?php
+define('SHOP_EXTENDEDIMAGES_PATH', dirname(__FILE__));
+define('SHOP_EXTENDEDIMAGES_FOLDER', basename(SHOP_EXTENDEDIMAGES_PATH));

@@ -1,0 +1,20 @@
+{
+	"name": "markguinn/silverstripe-shop-extendedimages",
+	"description": "Submodule for Silverstripe Shop adding multiple images with a thumbnail gallery and zooming.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "ecommerce", "shop", "images", "zoom", "multiple images"],
+	"license": "MIT",
+	"authors": [{
+		"name": "Mark Guinn",
+		"email": "mark@adaircreative.com",
+		"homepage": "http://github.com/markguinn"
+	}],
+	"extra": {
+		"installer-name": "shop_extendedimages"
+	},
+	"require": {
+		"silverstripe/framework": "~3.1",
+		"burnbright/silverstripe-shop": "~1.0",
+		"bummzack/sortablefile": "*"
+	}
+}
