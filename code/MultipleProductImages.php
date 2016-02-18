@@ -23,10 +23,18 @@ class MultipleProductImages extends DataExtension
 	 * @param FieldList $fields
 	 */
 	function updateCMSFields(FieldList $fields) {
-		$fields->addFieldsToTab('Root.Images', array(
+		$newfields = array(
 			new SortableUploadField('AdditionalImages', _t('SHOPEXTENDEDIMAGES.AdditionImages', 'Additional Images')),
 			new LiteralField('additionalimagesinstructions', '<p>' . _t('SHOPEXTENDEDIMAGES.Instructions', 'You can change the order of the Additional Images by clicking and dragging on the image thumbnail.') . '</p>'),
-		));
+		);
+		if($fields->hasTabset()) {
+			$fields->addFieldsToTab('Root.Images', $newfields);
+		}
+		else {
+			foreach($newfields as $field) {
+				$fields->push($field);
+			}
+		}
 	}
 
 	/**
